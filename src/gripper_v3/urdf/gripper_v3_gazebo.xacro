@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Gazebo Reference macro -->
+  <xacro:macro name="RefLink" params="ref">
+    <gazebo reference="${ref}">
+      <kp>1000000.0</kp>
+      <kd>100.0</kd>
+      <mu1>1.0</mu1>
+      <mu2>1.0</mu2>
+      <maxVel>1.0</maxVel>
+      <minDepth>0.0001</minDepth>
+      <material>Gazebo/DarkGrey</material>
+    </gazebo>
+  </xacro:macro>
+
+  <!-- Link1 -->
+  <RefLink ref="base_link" />
+
+  <!-- Link2 -->
+  <RefLink ref="base_cover" />
+
+  <!-- Link3 -->
+  <RefLink ref="gear" />
+
+  <!-- Link4 -->
+  <RefLink ref="gripper_case" />
+
+  <gazebo reference="finger_R">
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.001</minDepth>
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <gazebo reference="finger_L">
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.001</minDepth>
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="gazebo_gripper_ros_control" filename="libroboticsgroup_gazebo_mimic_joint_plugin.so">
+      <joint>finger_R_joint</joint>
+      <mimicJoint>finger_L_joint</mimicJoint>
+      <multiplier>1.0</multiplier>
+      <offset>0.0</offset>
+      <maxEffort>10.0</maxEffort>
+    </plugin>
+  </gazebo>
+  
+
+</robot>

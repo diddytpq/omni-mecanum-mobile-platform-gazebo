@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="gripper_v3">
+
+<xacro:include filename="$(find gripper_v3)/urdf/gripper_v3_transmision.xacro" />
+<xacro:include filename="$(find gripper_v3)/urdf/gripper_v3_gazebo.xacro" />
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.000233932670539957 -0.00290226342934575 -0.0209864529757334" rpy="0 0 0" />
+      <mass value="0.0860486271706072" />
+      <inertia ixx="4.60270856070871E-05" ixy="5.33345466078872E-07" ixz="1.61610456827888E-08" iyy="4.42358536381739E-05" iyz="-3.89906446444853E-06" izz="5.96488212968535E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="package://gripper_v3/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.745098039215686 0.745098039215686 0.745098039215686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://gripper_v3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+ 
+  <joint name="base_cover_joint" type="fixed">
+    <origin xyz="-0.000345710724147255 0.0163150116974555 -0.0395" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="base_cover" />
+    <axis xyz="0 0 0" />
+  </joint>
+ 
+  <link name="base_cover">
+    <inertial>
+      <origin xyz="0.00097934794351009 -1.1557777039672E-18 0.00118306456131385" rpy="0 0 0" />
+      <mass value="0.00379367551893743" />
+      <inertia ixx="4.13363177386539E-07" ixy="-7.34969536127035E-23" ixz="-2.09449409511163E-09" iyy="1.01783223473537E-06" iyz="-3.6965123010999E-25" izz="1.42719758204509E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://gripper_v3/meshes/base_cover.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.745098039215686 0.745098039215686 0.745098039215686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://gripper_v3/meshes/base_cover.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="gear_joint" type="fixed">
+    <origin xyz="0.012597246148251 0 -0.02795" rpy="3.14159265358979 0 3.14159265358979" />
+    <parent link="base_cover" />
+    <child link="gear" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="gear">
+    <inertial>
+      <origin xyz="1.48719050871091E-06 -1.63442044206748E-06 -0.0174626631819118" rpy="0 0 0" />
+      <mass value="0.0029572486230655" />
+      <inertia ixx="2.06097244598777E-07" ixy="-6.73342692475733E-13" ixz="-1.56110015737058E-12" iyy="2.0609248744706E-07" iyz="-2.48416054683388E-12" izz="1.59997164132047E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://gripper_v3/meshes/gear.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.8 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://gripper_v3/meshes/gear.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link
+    name="gripper_case">
+    <inertial>
+      <origin
+        xyz="0.0101631127526922 -0.000874217173177295 0.0112240453195015"
+        rpy="0 0 0" />
+      <mass
+        value="0.0418508994739882" />
+      <inertia
+        ixx="1.00570098519439E-05"
+        ixy="6.07774954541504E-06"
+        ixz="2.43903118826728E-07"
+        iyy="3.72909675922631E-05"
+        iyz="-4.86061773221263E-07"
+        izz="4.2398664379189E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_v3/meshes/gripper_case.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.745098039215686 0.745098039215686 0.745098039215686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_v3/meshes/gripper_case.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_case_joint"
+    type="fixed">
+    <origin
+      xyz="0.028418 -0.007505 -0.0455"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="gripper_case" />
+    <axis
+      xyz="0 0 0" />
+    <dynamics friction="1.0"/>
+  </joint>
+  <link
+    name="finger_R">
+    <inertial>
+      <origin
+        xyz="0.0646410151274838 -0.00298003356390997 -0.0260492558497054"
+        rpy="0 0 0" />
+      <mass
+        value="0.016416959143224" />
+      <inertia
+        ixx="1.86017739488292E-06"
+        ixy="2.30960752109193E-07"
+        ixz="7.59965115700977E-07"
+        iyy="1.70037513595875E-05"
+        iyz="-8.84757793955789E-08"
+        izz="1.58929298094101E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_v3/meshes/finger_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.8 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_v3/meshes/finger_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger_R_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.009184 -0.013558 0.01425"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="gripper_case" />
+    <child
+      link="finger_R" />
+    <axis
+      xyz="0 0 1" />
+    <!--dynamics friction="0.3"/!-->
+    <limit
+      lower="0"
+      upper="0.0325" 
+      effort="9999"
+      velocity="0.5" /> <!--0.0325-->
+  </joint>
+
+  <link
+    name="finger_L">
+    <inertial>
+      <origin
+        xyz="-0.0646410151274838 0.00298003356390986 -0.0260492558497054"
+        rpy="0 0 0" />
+      <mass
+        value="0.016416959143224" />
+      <inertia
+        ixx="1.86017739488292E-06"
+        ixy="2.30960752109188E-07"
+        ixz="-7.59965115700987E-07"
+        iyy="1.70037513595875E-05"
+        iyz="8.84757793955747E-08"
+        izz="1.58929298094101E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_v3/meshes/finger_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.8 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_v3/meshes/finger_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger_L_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.009184 0.024542 0.00775"
+      rpy="1.5708 0 0" />
+    <parent
+      link="gripper_case" />
+    <child
+      link="finger_L" />
+    <axis
+      xyz="0 0 1" />
+    <!--dynamics friction="0.3"/!-->
+    <limit
+      lower="0"
+      upper="0.0325"
+      effort="9999"
+      velocity="0.5" />
+    <mimic joint="finger_R_joint" multiplier="1.0" offset="0.0" />
+  </joint>
+
+    
+</robot>

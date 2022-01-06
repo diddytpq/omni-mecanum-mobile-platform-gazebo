@@ -1,0 +1,38 @@
+omni_manipulator:
+
+  # Position Controllers ---------------------------------------
+  joint_1_pos:
+    type: position_controllers/JointPositionController
+    joint: joint_1
+    pid: {p: 150.0, i: 10.0, d: 1.0}
+    
+  joint_2_pos:
+    type: position_controllers/JointPositionController
+    joint: joint_2
+    pid: {p: 150.0, i: 10.0, d: 1.0}
+    
+  joint_3_pos:
+    type: position_controllers/JointPositionController
+    joint: joint_3
+    pid: {p: 150.0, i: 10.0, d: 1.0}
+    
+  joint_4_pos:
+    type: position_controllers/JointPositionController
+    joint: joint_4
+    pid: {p: 150.0, i: 10.0, d: 1.0}
+    
+  joint_5_pos:
+    type: position_controllers/JointPositionController
+    joint: joint_5
+    pid: {p: 150.0, i: 10.0, d: 1.0}
+    
+  joint_6_pos:
+    type: position_controllers/JointPositionController
+    joint: joint_6
+    pid: {p: 150.0, i: 10.0, d: 1.0}
+
+  joint_7_pos:
+    type: position_controllers/JointPositionController
+    joint: end_effect_joint
+    pid: {p: 150.0, i: 10.0, d: 1.0}
+  

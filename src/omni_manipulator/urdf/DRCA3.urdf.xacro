@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<!-- DRC_arm -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="DRCA3">
+
+<xacro:include filename="$(find omni_manipulator)/urdf/DRCA3_materials.xacro" />
+<xacro:include filename="$(find omni_manipulator)/urdf/DRCA3_transmision.xacro" />
+<xacro:include filename="$(find gripper_v3)/urdf/gripper_v3.urdf.xacro" />
+
+<!-- base -->
+<xacro:property name="base_xyz" value="0.0 0.0 0.045" /> <!--0.045-->
+<xacro:property name="base_rpy" value="0.0 0.0 ${pi/2}" />
+<!-- link_1 -->
+<xacro:property name="link_1_xyz" value="0.0 0.0 -0.045" /> <!--0.129-->
+<xacro:property name="link_1_rpy" value="${pi/2} 0.0 ${-pi/2}" />
+<!-- link_2 -->
+<xacro:property name="link_2_xyz" value="0.0 0.0 0.05392" />
+<xacro:property name="link_2_rpy" value="0 ${pi} ${-pi/2}" />
+<!-- link_3 -->
+<xacro:property name="link_3_xyz" value="0.0 0.0 0.06492" />
+<xacro:property name="link_3_rpy" value="0.0 ${-pi/2} ${-pi/2}" />
+<!-- link_4 -->
+<xacro:property name="link_4_xyz" value="0.0 0.0 0.073" /> <!---0.043-->
+<xacro:property name="link_4_rpy" value="0.0 ${-pi/2} 0.0" />
+<!-- link_5 -->
+<xacro:property name="link_5_xyz" value="0.0 0.0 -0.073" /> <!--0.04346-->
+<xacro:property name="link_5_rpy" value="0.0 ${pi/2} ${pi}" />
+<!-- link_6 -->
+<xacro:property name="link_6_xyz" value="0.0 0.0 0.0" />
+<xacro:property name="link_6_rpy" value="0.0 ${-pi/2} ${pi/2}" />
+
+
+<!-- joint_1 -->
+<xacro:property name="joint_1_xyz" value="0.0 0.0 0.175" />
+<xacro:property name="joint_1_rpy" value="0.0 0.0 0.0" />
+<!-- joint_2 -->
+<xacro:property name="joint_2_xyz" value="0.0 0.0 0.0" />
+<xacro:property name="joint_2_rpy" value="${pi/2} ${-pi/2} 0.0" />
+<!-- joint_3 -->
+<xacro:property name="joint_3_xyz" value="0.192 0.0 0.0" />
+<xacro:property name="joint_3_rpy" value="0.0 0.0 0.0" />
+<!-- joint_4 -->
+<xacro:property name="joint_4_xyz" value="0.196 0.0 -0.116" />
+<xacro:property name="joint_4_rpy" value="0.0 0.0 ${-pi/2}" />
+<!-- joint_5 -->
+<xacro:property name="joint_5_xyz" value="0.0 0.11646 0.0" />
+<xacro:property name="joint_5_rpy" value="${-pi/2} 0.0 0.0" />
+<!-- joint_6 -->
+<xacro:property name="joint_6_xyz" value="0.0 -0.043333 0.0" />
+<xacro:property name="joint_6_rpy" value="${pi/2} 0.0 0.0" />
+<!-- joint_7 -->
+<xacro:property name="joint_7_xyz" value="0.00185 0.0 0.016167" />
+<xacro:property name="joint_7_rpy" value="${pi} 0.0 ${pi/2}" />
+<!--end effect-->
+<xacro:property name="end_effect_xyz" value="0.0 0.128 0.072667" />
+<xacro:property name="end_effect_rpy" value="${-pi/2} 0.0 0.0" />
+
+  <link name="DRCA3_base">
+    <visual>
+      <origin xyz="${base_xyz}" rpy="${base_rpy}"/>
+      <geometry>
+        <mesh filename="package://omni_manipulator/meshes/DRCA3_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="light grey"/>
+    </visual>
+
+    <collision>
+      <origin xyz="${base_xyz}" rpy="${base_rpy}"/>
+      <geometry>
+         <mesh filename="package://omni_manipulator/meshes/DRCA3_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="${base_xyz}" rpy="${base_rpy}"/>
+      <mass value="0.444"/>
+      <inertia ixx="1.026018e-03" ixy="-1.210000e-07" ixz="3.730000e-07" iyy="1.488758e-03" iyz="-1.250000e-07" izz="8.508960e-04"/>
+    </inertial>
+  </link>
+
+  <!-- joint_1 -->
+  <joint name="joint_1" type="revolute">
+    <origin xyz="${joint_1_xyz}" rpy="${joint_1_rpy}"/>
+    <parent link="DRCA3_base"/>
+    <child link="link_1"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit velocity="4.8" effort="300" lower="${-2*pi}" upper="${2*pi}" />
+  </joint>
+  <!-- link_1 -->
+  <link name="link_1">
+    <visual>
+      <origin xyz="${link_1_xyz}" rpy="${link_1_rpy}"/>
+      <geometry>
+        <mesh filename="package://omni_manipulator/meshes/link_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+
+    <collision>
+      <origin xyz="${link_1_xyz}" rpy="${link_1_rpy}"/>
+      <geometry>
+         <mesh filename="package://omni_manipulator/meshes/link_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="${link_1_xyz}" rpy="${link_1_rpy}"/>
+      <mass value="0.386"/>
+      <inertia ixx="4.284510e-04" ixy="-2.990000e-06" ixz="-7.700000e-08" iyy="4.288210e-04" iyz="-9.200000e-08" izz="5.227170e-04"/>
+    </inertial>
+  </link>
+
+  <!-- joint_2 -->
+  <joint name="joint_2" type="revolute">
+    <origin xyz="${joint_2_xyz}" rpy="${joint_2_rpy}"/>
+    <parent link="link_1"/>
+    <child link="link_2"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit velocity="4.8" effort="300" lower="${-pi}" upper="${pi}" />
+  </joint>
+
+  <!-- link_2 -->
+  <link name="link_2">
+    <visual>
+      <origin xyz="${link_2_xyz}" rpy="${link_2_rpy}"/>
+      <geometry>
+        <mesh filename="package://omni_manipulator/meshes/link_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+
+    <collision>
+      <origin xyz="${link_2_xyz}" rpy="${link_2_rpy}"/>
+      <geometry>
+         <mesh filename="package://omni_manipulator/meshes/link_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="${link_2_xyz}" rpy="${link_2_rpy}"/>
+      <mass value="0.822"/>
+      <inertia ixx="5.132895e-03" ixy="4.284000e-06" ixz="3.040000e-07" iyy="1.584478e-03" iyz="1.526370e-04" izz="4.085190e-03"/>
+    </inertial>
+  </link>
+
+  <!-- joint_3 -->
+  <joint name="joint_3" type="revolute">
+    <origin xyz="${joint_3_xyz}" rpy="${joint_3_rpy}"/>
+    <parent link="link_2"/>
+    <child link="link_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit velocity="4.8" effort="300" lower="${-pi}" upper="${pi}" />
+  </joint>
+
+  <!-- link_3 -->
+  <link name="link_3">
+    <visual>
+      <origin xyz="${link_3_xyz}" rpy="${link_3_rpy}"/>
+      <geometry>
+        <mesh filename="package://omni_manipulator/meshes/link_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+
+    <collision>
+      <origin xyz="${link_3_xyz}" rpy="${link_3_rpy}"/>
+      <geometry>
+         <mesh filename="package://omni_manipulator/meshes/link_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="${link_3_xyz}" rpy="${link_3_rpy}"/>
+      <mass value="0.547"/>
+      <inertia ixx="2.758974e-03" ixy="3.424000e-04" ixz="-2.990000e-07" iyy="8.198600e-04" iyz="-1.383000e-06" izz="3.309681e-03"/>
+    </inertial>
+  </link>
+
+  <!-- joint_4 -->
+  <joint name="joint_4" type="revolute">
+    <origin xyz="${joint_4_xyz}" rpy="${joint_4_rpy}"/>
+    <parent link="link_3"/>
+    <child link="link_4"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit velocity="4.8" effort="300" lower="${-pi}" upper="${pi}" />
+  </joint>
+
+   <!-- link_4 -->
+  <link name="link_4">
+    <visual>
+      <origin xyz="${link_4_xyz}" rpy="${link_4_rpy}"/>
+      <geometry>
+        <mesh filename="package://omni_manipulator/meshes/link_4_5.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+
+    <collision>
+      <origin xyz="${link_4_xyz}" rpy="${link_4_rpy}"/>
+      <geometry>
+         <mesh filename="package://omni_manipulator/meshes/link_4_5.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="${link_4_xyz}" rpy="${link_4_rpy}"/>
+      <mass value="0.348"/>
+      <inertia ixx="2.616060e-04" ixy="6.396800e-05" ixz="-5.560000e-07" iyy="4.185360e-04" iyz="-3.720000e-07" izz="5.112380e-04"/>
+    </inertial>
+  </link>
+
+  <!-- joint_5 -->
+  <joint name="joint_5" type="revolute">
+    <origin xyz="${joint_5_xyz}" rpy="${joint_5_rpy}"/>
+    <parent link="link_4"/>
+    <child link="link_5"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit velocity="4.8" effort="300" lower="${-pi}" upper="${pi}" />
+  </joint>
+  
+  <!-- link_5 -->
+  <link name="link_5">
+    <visual>
+      <origin xyz="${link_5_xyz}" rpy="${link_5_rpy}"/>
+      <geometry>
+        <mesh filename="package://omni_manipulator/meshes/link_4_5.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+
+    <collision>
+      <origin xyz="${link_5_xyz}" rpy="${link_5_rpy}"/>
+      <geometry>
+         <mesh filename="package://omni_manipulator/meshes/link_4_5.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="${link_5_xyz}" rpy="${link_5_rpy}"/>
+      <mass value="0.348"/>
+      <inertia ixx="2.616060e-04" ixy="6.396800e-05" ixz="-5.560000e-07" iyy="4.185360e-04" iyz="-3.720000e-07" izz="5.112380e-04"/>
+    </inertial>
+  </link>
+
+  <!-- joint_6 -->
+  <joint name="joint_6" type="revolute">
+    <origin xyz="${joint_6_xyz}" rpy="${joint_6_rpy}"/>
+    <parent link="link_5"/>
+    <child link="link_6"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit velocity="4.8" effort="300" lower="${-pi}" upper="${pi}" />
+  </joint>
+  
+  <!-- link_6 -->
+  <link name="link_6">
+    <visual>
+      <origin xyz="${link_6_xyz}" rpy="${link_6_rpy}"/>
+      <geometry>
+        <mesh filename="package://omni_manipulator/meshes/link_6.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+
+    <collision>
+      <origin xyz="${link_6_xyz}" rpy="${link_6_rpy}"/>
+      <geometry>
+         <mesh filename="package://omni_manipulator/meshes/link_6.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="${link_6_xyz}" rpy="${link_6_rpy}"/>
+      <mass value="0.062"/>
+      <inertia ixx="6.515000e-05" ixy="0.0" ixz="0.0" iyy="2.718000e-05" iyz="0.0" izz="7.663000e-05"/>
+    </inertial>
+  </link>
+
+  <joint name="gr_joint" type="fixed">
+    <origin xyz="${joint_7_xyz}" rpy="${joint_7_rpy}"/>
+    <parent link="link_6"/>
+    <child link="base_link"/>
+  </joint>
+
+  <joint name="end_effect_joint" type="revolute">
+    <origin xyz="${end_effect_xyz}" rpy="${end_effect_rpy}"/>
+    <parent link="link_6"/>
+    <child link="end_effector"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit velocity="4.8" effort="300" lower="${-pi}" upper="${pi}" />
+  </joint>
+
+  <link name="end_effector">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.01" />
+      </geometry>
+    </visual>
+    <!--collision>
+      <origin xyz="${end_effect_xyz}" rpy="${end_effect_rpy}"/>
+      <geometry>
+         <box size="0.001 0.001 0.001" />
+      </geometry>
+    </collision!-->
+    <inertial>
+      <origin xyz="0.0 0.0 0.0"/>
+      <mass value="1.0e-03"/>
+      <inertia ixx="1.0e-03" ixy="1.0e-03" ixz="1.0e-03" iyy="1.0e-03" iyz="1.0e-03" izz="1.0e-03"/>
+    </inertial>
+  </link>
+
+
+</robot>

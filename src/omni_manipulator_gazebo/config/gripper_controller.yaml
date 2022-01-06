@@ -1,0 +1,20 @@
+omni_manipulator:    
+  # gripper:
+  #   type: effort_controllers/JointEffortController
+  #   joint: finger_R_joint
+  #   pid: {p: 100.0, i: 0.1, d: 0.0}
+
+  # gripper_sub:
+  #   type: effort_controllers/JointEffortController
+  #   joint: finger_L_joint
+  #   pid: {p: 100.0, i: 0.1, d: 0.0}
+  
+  gripper:
+    type: effort_controllers/JointPositionController
+    joint: finger_R_joint
+    pid: {p: 50, i: 0.1, d: 0}
+
+  gripper_sub:
+    type: effort_controllers/JointPositionController
+    joint: finger_L_joint
+    pid: {p: 50, i: 0.1, d: 0}

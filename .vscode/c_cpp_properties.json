@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/opt/ros/melodic/include/**",
+                "/home/david/modern_robotics/catkin_ws/devel/include/**",
+                "/home/david/modern_robotics/catkin_ws/src/DynamixelSDK/ros/include/**",
+                "/home/david/modern_robotics/catkin_ws/src/dynamixel-workbench/dynamixel_workbench_controllers/include/**",
+                "/home/david/modern_robotics/catkin_ws/src/dynamixel-workbench/dynamixel_workbench_operators/include/**",
+                "/home/david/modern_robotics/catkin_ws/src/dynamixel-workbench/dynamixel_workbench_toolbox/include/**",
+                "/home/david/modern_robotics/catkin_ws/src/open_manipulator/open_manipulator_controller/include/**",
+                "/home/david/modern_robotics/catkin_ws/src/open_manipulator/open_manipulator_libs/include/**",
+                "/home/david/modern_robotics/catkin_ws/src/open_manipulator/open_manipulator_teleop/include/**",
+                "/home/david/modern_robotics/catkin_ws/src/robotis_manipulator/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++14"
+        }
+    ],
+    "version": 4
+}
