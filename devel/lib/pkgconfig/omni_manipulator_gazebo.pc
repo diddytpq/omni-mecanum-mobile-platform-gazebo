@@ -1,0 +1,8 @@
+prefix=/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/devel
+
+Name: omni_manipulator_gazebo
+Description: Description of omni_manipulator_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs gazebo_ros gazebo_ros_control controller_manager joint_state_controller robot_state_publisher effort_controllers xacro urdf

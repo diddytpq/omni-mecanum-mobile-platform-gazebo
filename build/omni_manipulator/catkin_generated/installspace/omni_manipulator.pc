@@ -1,0 +1,8 @@
+prefix=/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/install
+
+Name: omni_manipulator
+Description: Description of omni_manipulator
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
