@@ -50,9 +50,9 @@
                 </geometry>
             </collision>
             <inertial>
-                <mass value="50.781" /> <!--20.781-->
-                <origin xyz="0.0 0.0 0.0" rpy="${pi/2} 0.0 ${-pi/2}"/>
-                <inertia ixx="3.9866734999999998" ixy="9.6705e-05"  ixz="0.000248215"  iyy="6.32225"  iyz="0.00284912"  izz="2.6884815" />
+                <mass value="20.781" /> <!--20.781-->
+                <origin xyz="0.0 0.0 -0.1" rpy="${pi/2} 0.0 ${-pi/2}"/>
+                <inertia ixx="1.0" ixy="9.6705e-05"  ixz="0.000248215"  iyy="1.66"  iyz="0.00284912"  izz="0.855" />
             </inertial>
         </link>
 

@@ -349,6 +349,8 @@ namespace gazebo
         odom_.header.stamp = current_time;
         odom_.header.frame_id = odom_frame;
         odom_.child_frame_id = base_link_frame;
+        ROS_INFO("odom_.twist.twist.linear.x :%f",odom_.twist.twist.linear.x);
+        ROS_INFO("odom_.twist.twist.linear.y :%f",odom_.twist.twist.linear.y);
 
         odometry_pub_.publish(odom_);
     }
