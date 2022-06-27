@@ -7,4 +7,8 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build'
+export CMAKE_PREFIX_PATH="/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH='/opt/ros/noetic/lib:/usr/local/cuda-11.3/lib64'
+export PWD='/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src:$ROS_PACKAGE_PATH"

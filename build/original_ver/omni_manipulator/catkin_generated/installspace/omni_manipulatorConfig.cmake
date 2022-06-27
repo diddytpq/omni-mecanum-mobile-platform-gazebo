@@ -67,14 +67,14 @@ set(omni_manipulator_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(omni_manipulator_SOURCE_PREFIX /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/omni_manipulator)
-  set(omni_manipulator_DEVEL_PREFIX /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/devel)
+  set(omni_manipulator_SOURCE_PREFIX /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/omni_manipulator)
+  set(omni_manipulator_DEVEL_PREFIX /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/devel)
   set(omni_manipulator_INSTALL_PREFIX "")
   set(omni_manipulator_PREFIX ${omni_manipulator_DEVEL_PREFIX})
 else()
   set(omni_manipulator_SOURCE_PREFIX "")
   set(omni_manipulator_DEVEL_PREFIX "")
-  set(omni_manipulator_INSTALL_PREFIX /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/install)
+  set(omni_manipulator_INSTALL_PREFIX /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/install)
   set(omni_manipulator_PREFIX ${omni_manipulator_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/install/lib;/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

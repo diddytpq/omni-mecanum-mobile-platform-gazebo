@@ -32,7 +32,7 @@
     <plugin name="mecanum_control" filename="libgazebo_ros_control.so">
       <controlPeriod>1</controlPeriod>
       <robotNamespace>/mecanum</robotNamespace>
-      <!--jointName>front_R_wheel_joint, front_L_wheel_joint, back_R_wheel_joint, back_L_wheel_joint </jointName-->
+      <!-- <jointName>front_R_wheel_joint, front_L_wheel_joint, back_R_wheel_joint, back_L_wheel_joint </jointName> -->
       <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
       <!--legacyModeNS>true</legacyModeNS-->
     </plugin>

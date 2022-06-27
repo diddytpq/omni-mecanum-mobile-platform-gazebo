@@ -13,7 +13,7 @@
         <xacro:property name="radius" value="0.0762"/>
         <xacro:property name="length" value="0.045"/>
 
-        <joint name="${prefix}_wheel_joint" type="continuous">
+        <joint name="${prefix}_wheel_joint" type="continuous"> <!--fixed!-->
             <parent link="${parent}"/>
             <child link="${prefix}_wheel"/>
             <xacro:insert_block name="origin" />
@@ -79,12 +79,12 @@
 
 
         <gazebo reference="${prefix}_wheel">
-            <mu1>1.0</mu1>
-            <mu2>1.0</mu2> 
+            <mu1>0.0</mu1>
+            <mu2>0.0</mu2> 
             <kp>1e+13</kp>
             <kd>1.0</kd>
             <!-- <maxVel>0.001</maxVel> -->
-            <!-- <minDepth>0.00000000001</minDepth> -->
+            <minDepth>0.001</minDepth>
             <!-- <turnGravityOff>true</turnGravityOff> -->
             <!-- <gravity>1</gravity> -->
             <material>Gazebo/DarkGrey</material>

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "mecanum_robot_description"
-PROJECT_SPACE_DIR = "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/devel"
+PROJECT_SPACE_DIR = "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/devel"
 PROJECT_VERSION = "0.0.0"

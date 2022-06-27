@@ -103,12 +103,13 @@ def move_mecanum(linear,angular_z):
     twist.angular.z = angular_z
 
     wheel_vel = mecanum_wheel_velocity(twist.linear.x, twist.linear.y, twist.angular.z)
-
-    pub.publish(twist)
+    
     pub_wheel_vel_1.publish(wheel_vel[0,:])
     pub_wheel_vel_2.publish(wheel_vel[1,:])
     pub_wheel_vel_3.publish(wheel_vel[2,:])
     pub_wheel_vel_4.publish(wheel_vel[3,:])
+
+    pub.publish(twist)
 
     return [x_vel, y_vel], angular_z
 

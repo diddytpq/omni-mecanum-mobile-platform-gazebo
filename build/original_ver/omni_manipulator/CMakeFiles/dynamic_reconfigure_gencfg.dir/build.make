@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src
+CMAKE_SOURCE_DIR = /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build
+CMAKE_BINARY_DIR = /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/build
 
 # Utility rule file for dynamic_reconfigure_gencfg.
 
@@ -63,10 +63,10 @@ original_ver/omni_manipulator/CMakeFiles/dynamic_reconfigure_gencfg.dir/build: d
 .PHONY : original_ver/omni_manipulator/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
 
 original_ver/omni_manipulator/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean:
-	cd /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/omni_manipulator && $(CMAKE_COMMAND) -P CMakeFiles/dynamic_reconfigure_gencfg.dir/cmake_clean.cmake
+	cd /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/omni_manipulator && $(CMAKE_COMMAND) -P CMakeFiles/dynamic_reconfigure_gencfg.dir/cmake_clean.cmake
 .PHONY : original_ver/omni_manipulator/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean
 
 original_ver/omni_manipulator/CMakeFiles/dynamic_reconfigure_gencfg.dir/depend:
-	cd /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/omni_manipulator /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/omni_manipulator /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/omni_manipulator/CMakeFiles/dynamic_reconfigure_gencfg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/omni_manipulator /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/build /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/omni_manipulator /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/omni_manipulator/CMakeFiles/dynamic_reconfigure_gencfg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : original_ver/omni_manipulator/CMakeFiles/dynamic_reconfigure_gencfg.dir/depend
 
