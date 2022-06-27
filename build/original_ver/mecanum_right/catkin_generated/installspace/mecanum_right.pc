@@ -1,0 +1,8 @@
+prefix=/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/install
+
+Name: mecanum_right
+Description: Description of mecanum_right
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

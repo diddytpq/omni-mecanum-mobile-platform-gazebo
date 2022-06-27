@@ -249,14 +249,7 @@ namespace gazebo
         double angular_vel_y = parent_->GetWorldAngularVel().y;
 #endif
         float yaw = pose.Rot().Yaw();
-        double seconds_since_last_cmd_msg =
-            (current_time - last_cmd_msg_time_).Double();
-        if (seconds_since_last_cmd_msg > cmd_vel_timeout_)
-        {
-            x_ = 0.0;
-            y_ = 0.0;
-            rot_ = 0.0;
-        }
+
         parent_->SetLinearVel(ignition::math::Vector3d(
                     x_ * cosf(yaw) - y_ * sinf(yaw),
                     y_ * cosf(yaw) + x_ * sinf(yaw),

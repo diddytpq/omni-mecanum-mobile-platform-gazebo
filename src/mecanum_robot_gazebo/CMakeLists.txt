@@ -120,4 +120,7 @@ catkin_package(
     )
 
 add_library(ropod_control_plugin src/ropod_control_plugin.cpp)
+add_library(custom_control_plugin src/custom_control_plugin.cpp)
 target_link_libraries(ropod_control_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${Boost_LIBRARIES})
+target_link_libraries(custom_control_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${Boost_LIBRARIES})
+

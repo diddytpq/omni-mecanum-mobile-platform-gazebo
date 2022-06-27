@@ -15,7 +15,7 @@
   </gazebo>
   
   <gazebo>
-    <plugin name="$custom_controller" filename="libropod_control_plugin.so">
+    <plugin name="$custom_controller" filename="libcustom_control_plugin.so">
         <commandTopic>/mecanum_vel</commandTopic>
         <odometryTopic>/odom</odometryTopic>
         <odometryFrame>/odom</odometryFrame>

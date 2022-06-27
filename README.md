@@ -5,6 +5,8 @@
 ```bash
 roslaunch mecanum_robot_gazebo mecanum_mobile_platform.launch
 
+roslaunch mecanum_robot_gazebo mecanum_mobile_platform_custom.launch
+
 roslaunch mecanum_robot_gazebo mecanum_velodyne.launch
 
 ```

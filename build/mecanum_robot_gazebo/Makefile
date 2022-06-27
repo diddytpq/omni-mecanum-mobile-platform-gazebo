@@ -648,6 +648,21 @@ nav_msgs_generate_messages_cpp/fast:
 .PHONY : nav_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+mecanum_robot_gazebo/CMakeFiles/custom_control_plugin.dir/rule:
+	cd /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build && $(MAKE) -f CMakeFiles/Makefile2 mecanum_robot_gazebo/CMakeFiles/custom_control_plugin.dir/rule
+.PHONY : mecanum_robot_gazebo/CMakeFiles/custom_control_plugin.dir/rule
+
+# Convenience name for target.
+custom_control_plugin: mecanum_robot_gazebo/CMakeFiles/custom_control_plugin.dir/rule
+
+.PHONY : custom_control_plugin
+
+# fast build rule for target.
+custom_control_plugin/fast:
+	cd /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build && $(MAKE) -f mecanum_robot_gazebo/CMakeFiles/custom_control_plugin.dir/build.make mecanum_robot_gazebo/CMakeFiles/custom_control_plugin.dir/build
+.PHONY : custom_control_plugin/fast
+
+# Convenience name for target.
 mecanum_robot_gazebo/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
 	cd /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build && $(MAKE) -f CMakeFiles/Makefile2 mecanum_robot_gazebo/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 .PHONY : mecanum_robot_gazebo/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
@@ -1157,6 +1172,33 @@ tf_generate_messages_lisp/fast:
 	cd /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build && $(MAKE) -f mecanum_robot_gazebo/CMakeFiles/tf_generate_messages_lisp.dir/build.make mecanum_robot_gazebo/CMakeFiles/tf_generate_messages_lisp.dir/build
 .PHONY : tf_generate_messages_lisp/fast
 
+src/custom_control_plugin.o: src/custom_control_plugin.cpp.o
+
+.PHONY : src/custom_control_plugin.o
+
+# target to build an object file
+src/custom_control_plugin.cpp.o:
+	cd /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build && $(MAKE) -f mecanum_robot_gazebo/CMakeFiles/custom_control_plugin.dir/build.make mecanum_robot_gazebo/CMakeFiles/custom_control_plugin.dir/src/custom_control_plugin.cpp.o
+.PHONY : src/custom_control_plugin.cpp.o
+
+src/custom_control_plugin.i: src/custom_control_plugin.cpp.i
+
+.PHONY : src/custom_control_plugin.i
+
+# target to preprocess a source file
+src/custom_control_plugin.cpp.i:
+	cd /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build && $(MAKE) -f mecanum_robot_gazebo/CMakeFiles/custom_control_plugin.dir/build.make mecanum_robot_gazebo/CMakeFiles/custom_control_plugin.dir/src/custom_control_plugin.cpp.i
+.PHONY : src/custom_control_plugin.cpp.i
+
+src/custom_control_plugin.s: src/custom_control_plugin.cpp.s
+
+.PHONY : src/custom_control_plugin.s
+
+# target to generate assembly for a file
+src/custom_control_plugin.cpp.s:
+	cd /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build && $(MAKE) -f mecanum_robot_gazebo/CMakeFiles/custom_control_plugin.dir/build.make mecanum_robot_gazebo/CMakeFiles/custom_control_plugin.dir/src/custom_control_plugin.cpp.s
+.PHONY : src/custom_control_plugin.cpp.s
+
 src/ropod_control_plugin.o: src/ropod_control_plugin.cpp.o
 
 .PHONY : src/ropod_control_plugin.o
@@ -1228,6 +1270,7 @@ help:
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... gazebo_msgs_generate_messages_lisp"
 	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... custom_control_plugin"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... gazebo_msgs_generate_messages_eus"
@@ -1263,6 +1306,9 @@ help:
 	@echo "... actionlib_generate_messages_eus"
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... tf_generate_messages_lisp"
+	@echo "... src/custom_control_plugin.o"
+	@echo "... src/custom_control_plugin.i"
+	@echo "... src/custom_control_plugin.s"
 	@echo "... src/ropod_control_plugin.o"
 	@echo "... src/ropod_control_plugin.i"
 	@echo "... src/ropod_control_plugin.s"
