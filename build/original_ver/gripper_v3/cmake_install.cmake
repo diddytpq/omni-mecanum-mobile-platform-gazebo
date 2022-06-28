@@ -1,8 +1,8 @@
-# Install script for directory: /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/gripper_v3
+# Install script for directory: /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/gripper_v3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,33 +38,33 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/gripper_v3/catkin_generated/installspace/gripper_v3.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/gripper_v3/catkin_generated/installspace/gripper_v3.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gripper_v3/cmake" TYPE FILE FILES
-    "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/gripper_v3/catkin_generated/installspace/gripper_v3Config.cmake"
-    "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/gripper_v3/catkin_generated/installspace/gripper_v3Config-version.cmake"
+    "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/gripper_v3/catkin_generated/installspace/gripper_v3Config.cmake"
+    "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/gripper_v3/catkin_generated/installspace/gripper_v3Config-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gripper_v3" TYPE FILE FILES "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/gripper_v3/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gripper_v3" TYPE FILE FILES "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/gripper_v3/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gripper_v3/config" TYPE DIRECTORY FILES "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/gripper_v3/config/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gripper_v3/config" TYPE DIRECTORY FILES "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/gripper_v3/config/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gripper_v3/launch" TYPE DIRECTORY FILES "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/gripper_v3/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gripper_v3/launch" TYPE DIRECTORY FILES "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/gripper_v3/launch/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gripper_v3/meshes" TYPE DIRECTORY FILES "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/gripper_v3/meshes/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gripper_v3/meshes" TYPE DIRECTORY FILES "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/gripper_v3/meshes/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gripper_v3/urdf" TYPE DIRECTORY FILES "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/gripper_v3/urdf/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gripper_v3/urdf" TYPE DIRECTORY FILES "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/gripper_v3/urdf/")
 endif()
 

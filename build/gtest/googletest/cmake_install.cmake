@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

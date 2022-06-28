@@ -1,2 +1,2 @@
 mecanum_robot_description:mecanum_robot_gazebo:original_ver/gripper_v3:original_ver/mecanum_left:original_ver/mecanum_right:original_ver/omni_manipulator:original_ver/omni_manipulator_gazebo
--DPYTHON_EXECUTABLE=/usr/bin/python3 -DCATKIN_DEVEL_PREFIX=/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/devel -DCMAKE_INSTALL_PREFIX=/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/install -G Unix Makefiles
+-DPYTHON_EXECUTABLE=/usr/bin/python3 -DCATKIN_DEVEL_PREFIX=/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/devel -DCMAKE_INSTALL_PREFIX=/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/install -G Unix Makefiles

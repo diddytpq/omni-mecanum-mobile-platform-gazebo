@@ -40,43 +40,26 @@
   </xacro:macro>
   
   <xacro:macro name="sensor_gazebo" params="">
-
     <gazebo reference="imu_link">
-      <sensor type="imu" name="imu">
+      <gravity>true</gravity>
+      <sensor name="imu_sensor" type="imu">
         <always_on>true</always_on>
-        <visualize>false</visualize>
+        <update_rate>100</update_rate>
+        <visualize>true</visualize>
+        <topic>__default_topic__</topic>
+        <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+          <topicName>imu</topicName>
+          <bodyName>imu_link</bodyName>
+          <updateRateHZ>200.0</updateRateHZ>
+          <gaussianNoise>0.0</gaussianNoise>
+          <xyzOffset>0 0 0</xyzOffset>
+          <rpyOffset>0 0 0</rpyOffset>
+          <frameName>imu_link</frameName>
+        </plugin>
+        <pose>0 0 0 0 0 0</pose>
       </sensor>
-      <material>Gazebo/Grey</material>
     </gazebo>
 
-    <gazebo>
-      <plugin name="imu_plugin" filename="libgazebo_ros_imu.so">
-        <alwaysOn>true</alwaysOn>
-        <bodyName>imu_link</bodyName>
-        <frameName>imu_link</frameName>
-        <topicName>imu</topicName>
-        <serviceName>imu_service</serviceName>
-        <gaussianNoise>0.0</gaussianNoise>
-        <updateRate>0</updateRate>
-        <imu>
-          <noise>
-            <type>gaussian</type>
-            <rate>
-              <mean>0.0</mean>
-              <stddev>2e-4</stddev>
-              <bias_mean>0.0000075</bias_mean>
-              <bias_stddev>0.0000008</bias_stddev>
-            </rate>
-            <accel>
-              <mean>0.0</mean>
-              <stddev>1.7e-2</stddev>
-              <bias_mean>0.1</bias_mean>
-              <bias_stddev>0.001</bias_stddev>
-            </accel>
-          </noise>
-        </imu>
-      </plugin>
-    </gazebo>
 
     <!-- <gazebo reference="front_R_wheel">
       <mu1>1.0</mu1>

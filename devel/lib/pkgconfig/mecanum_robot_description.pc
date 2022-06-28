@@ -1,4 +1,4 @@
-prefix=/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/devel
+prefix=/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/devel
 
 Name: mecanum_robot_description
 Description: Description of mecanum_robot_description

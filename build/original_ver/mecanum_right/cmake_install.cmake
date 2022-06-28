@@ -1,8 +1,8 @@
-# Install script for directory: /home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/mecanum_right
+# Install script for directory: /home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/mecanum_right
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,33 +38,33 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/mecanum_right/catkin_generated/installspace/mecanum_right.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/mecanum_right/catkin_generated/installspace/mecanum_right.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_right/cmake" TYPE FILE FILES
-    "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/mecanum_right/catkin_generated/installspace/mecanum_rightConfig.cmake"
-    "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/mecanum_right/catkin_generated/installspace/mecanum_rightConfig-version.cmake"
+    "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/mecanum_right/catkin_generated/installspace/mecanum_rightConfig.cmake"
+    "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/build/original_ver/mecanum_right/catkin_generated/installspace/mecanum_rightConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_right" TYPE FILE FILES "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/mecanum_right/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_right" TYPE FILE FILES "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/mecanum_right/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_right/config" TYPE DIRECTORY FILES "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/mecanum_right/config/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_right/config" TYPE DIRECTORY FILES "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/mecanum_right/config/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_right/launch" TYPE DIRECTORY FILES "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/mecanum_right/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_right/launch" TYPE DIRECTORY FILES "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/mecanum_right/launch/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_right/meshes" TYPE DIRECTORY FILES "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/mecanum_right/meshes/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_right/meshes" TYPE DIRECTORY FILES "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/mecanum_right/meshes/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_right/urdf" TYPE DIRECTORY FILES "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/mecanum_right/urdf/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_right/urdf" TYPE DIRECTORY FILES "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/src/original_ver/mecanum_right/urdf/")
 endif()
 

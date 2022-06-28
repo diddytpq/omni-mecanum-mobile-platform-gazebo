@@ -1,4 +1,4 @@
-prefix=/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/install
+prefix=/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/install
 
 Name: mecanum_left
 Description: Description of mecanum_left

@@ -1,4 +1,4 @@
-prefix=/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/install
+prefix=/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/install
 
 Name: gripper_v3
 Description: Description of gripper_v3

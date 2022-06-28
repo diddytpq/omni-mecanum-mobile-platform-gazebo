@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/devel/lib/libropod_control_plugin.pdb"
-  "/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/devel/lib/libropod_control_plugin.so"
+  "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/devel/lib/libropod_control_plugin.pdb"
+  "/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/devel/lib/libropod_control_plugin.so"
   "CMakeFiles/ropod_control_plugin.dir/src/ropod_control_plugin.cpp.o"
 )
 

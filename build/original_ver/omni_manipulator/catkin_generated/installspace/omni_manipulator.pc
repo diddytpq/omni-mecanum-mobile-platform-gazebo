@@ -1,4 +1,4 @@
-prefix=/home/yang/workspace/omni-mecanum-mobile-platform-gazebo/install
+prefix=/home/yoseph/worckspace/omni-mecanum-mobile-platform-gazebo/install
 
 Name: omni_manipulator
 Description: Description of omni_manipulator
